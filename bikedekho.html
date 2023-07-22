@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>bikedekho</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+
+
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      font-family: sans-serif;
+    }
+
+    body {
+      background: rgba(0, 0, 0, 0.6) url('https://wallpaperset.com/w/full/6/1/a/124675.jpg') center center fixed;
+      background-size: cover;
+      background-blend-mode: darken;
+    }
+
+    .container {
+      margin: auto;
+      padding: 20px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .container h1 img {
+      height: 40px;
+      width: 180px;
+    }
+
+    .navbar u1 li {
+      display: inline-block;
+      list-style: none;
+      margin: 0 20px;
+    }
+
+    .navbar u1 li a {
+      padding: 10px;
+      text-decoration: none;
+      font-size: 20px;
+      transition: 1s;
+      justify-content: left;
+      text-align: left;
+
+    }
+
+    .navbar u1 li a:hover {
+      background-color: rgb(252, 20, 140);
+    }
+
+    .content {
+      position: absolute;
+      margin-top: 11%;
+      margin-left: 15%;
+    }
+
+    .content h1 {
+      font-size: 60px;
+
+    }
+
+    .search {
+      position: absolute;
+      margin-top: 22%;
+      margin-left: 15%;
+    }
+
+    .search input {
+      padding: 20px;
+      width: 500px;
+      border: 0;
+      outline: none;
+      border-radius: 30px;
+    }
+
+    .submit {
+      position: absolute;
+      margin-top: 28%;
+      margin-left: 30%;
+
+
+    }
+
+    .submit a {
+      padding: 17px 24px;
+      background-color: rgb(252, 20, 140);
+      text-decoration: none;
+      border-radius: 30px;
+
+    }
+
+    .main {
+      position: absolute;
+      margin-top: 40%;
+      margin-left: 6%;
+
+    }
+
+    .popular {
+      position: absolute;
+      margin-top: 35%;
+      margin-left: 6%;
+      font-size: 35px;
+      font-weight: bold;
+    }
+
+    .carousel-inner {
+      margin-top: 12%;
+      width: 1000px;
+      height: 750px;
+      margin-left: 10.5%;
+    }
+
+    .powerful {
+      margin-top: 72%;
+      font-size: 35px;
+      font-weight: bold;
+      margin-left: 15%;
+    }
+
+    .para {
+      margin-top: 50%;
+      font-size: 35px;
+      font-weight: bold;
+      margin-left: 15%;
+
+    }
+
+    .support {
+      margin-top: 3%;
+      font-size: 18px;
+      margin-left: 15%;
+      font-weight: bold;
+
+    }
+
+    .media p img {
+      height: 30px;
+      width: 30px;
+      margin-top: -27.25%;
+      margin-left: 15%;
+    }
+
+    .social {
+      margin-top: 3%;
+      font-size: 15px;
+      margin-left: 18%;
+    }
+  </style>
+
+
+</head>
+
+<body>
+  <div class="container">
+    <h1><img
+        src="data:image/png;base64,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"
+        alt="image not found"></h1>
+
+    <div class="navbar">
+      <u1>
+        <li><a href="#" style="color:aliceblue">HOME</a></li>
+        <li><a href="#" style="color:aliceblue">BIKES</a></li>
+        <li><a href="#" style="color:aliceblue">LOCATION</a></li>
+        <li><a href="#" style="color:aliceblue">ABOUT</a></li>
+        <li><a href="#" style="color:aliceblue">CONTACT US</a></li>
+      </u1>
+    </div>
+  </div>
+  <div class="content">
+    <h1 style="color:aliceblue">PURCHASE ANY BIKE <br> YOU WANT</h1>
+  </div>
+  </div>
+  <div class="search">
+    <input type="text" placeholder="Enter your dream bike">
+  </div>
+  <div class="submit">
+    <a href="#" style="color:aliceblue">Search</a>
+  </div>
+  <hr style="color:aliceblue">
+  <div class="popular">
+    <p style="color: aliceblue;">Popular Brands</p>
+  </div>
+
+
+  <div class="main">
+    <div class="contain" style="height: 150px; display: flex; gap: 20px;">
+      <a href="https://www.suzukimotorcycle.co.in/"><img
+          src="https://i.pinimg.com/550x/d9/11/43/d91143db7ca781598b70472c26cafe4f.jpg " width="200px" height="150px"
+          alt="image not found" style="justify-content: space-between;"></a>
+      <a href="https://www.ducati.com/in/en/home"><img src="https://wallpaperaccess.com/full/2087380.jpg" width="200px"
+          height="150px" alt="image not found" style="justify-content: space-between;"></a>
+      <a href="https://kawasaki-india.com/"><img
+          src="https://www.citypng.com/public/uploads/preview/kawasaki-motorcycle-white-logo-png-image-11662719845im5xf7pgza.png?v=2023070417"
+          width="200px" height="150px" alt="image not found" style="justify-content: space-between;"></a>
+      <a href="https://www.yamaha-motor-india.com/"><img
+          src="https://i.pinimg.com/originals/8c/62/07/8c62078a559e0ac3973ba5de269d134a.png" width="200px"
+          height="150px" alt="image not found" style="justify-content: space-between;"></a>
+      <a href="https://www.harley-davidson.com/in/en/index.html"><img
+          src="https://seeklogo.com/images/H/harley-davidson-logo-3DD8CD06B8-seeklogo.com.png" width="200px"
+          height="150px" alt="image not found" style="justify-content: space-between;"></a>
+
+      <a href="https://www.royalenfield.com/in/en/home/"><img
+          src="https://i.pinimg.com/originals/d6/68/cb/d668cb3371559743b60e43029391a91d.jpg" width="200px"
+          height="150px" alt="image not found" style="justify-content: space-between;"></a>
+
+    </div>
+    <br>
+    <br>
+    <br>
+    <div class="contain" style="height: 150px; display: flex; gap: 20px;">
+      <a href="https://www.ktmindia.com/"><img
+          src="https://i.pinimg.com/736x/53/50/ea/5350ea251dbc24276b034f90eb44eed9.jpg" width="200px" height="150px"
+          alt="image not found" style="justify-content: space-between;"></a>
+      <a href="https://www.tvsmotor.com/"><img src="https://www.javatpoint.com/fullformpages/images/tvs.jpg"
+          width="200px" height="150px" alt="image not found" style="justify-content: space-between;"></a>
+      <a href="https://www.heromotocorp.com/en-in.html"><img
+          src="https://logos-world.net/wp-content/uploads/2020/12/Hero-Logo.png" width="200px" height="150px"
+          alt="image not found" style="justify-content: space-between;"></a>
+      <a href="https://www.honda2wheelersindia.com/"><img
+          src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/7b/Honda_Logo.svg/1200px-Honda_Logo.svg.png"
+          width="200px" height="150px" alt="image not found" style="justify-content: space-between;"></a>
+      <a href="https://www.bajajauto.com/"><img
+          src="https://i.pinimg.com/1200x/6c/cc/d1/6cccd1613fb64af324f31958d6a53bdf.jpg" width="200px" height="150px"
+          alt="image not found" style="justify-content: space-between;"></a>
+      <a href="https://www.bmw-motorrad.in/en/home.html#/filter-al"> <img
+          src="https://i.pinimg.com/originals/44/12/69/44126986f218b837262af08d21acb441.jpg" width="200px"
+          height="150px" alt="image not found" style="justify-content: space-between;"></a>
+
+    </div>
+
+    <div id="carouselExampleInterval" class="carousel slide" data-bs-ride="carousel">
+      <div class="carousel-inner">
+        <div class="carousel-item active" data-bs-interval="2000">
+          <img src="https://www.suzukimotorcycles.com.au/wp-content/uploads/2021/02/D4S_9789-copy-scaled.jpg"
+            class="d-block w-100" alt="image not found">
+        </div>
+        <div class="carousel-item" data-bs-interval="2000">
+          <img
+            src="https://cdni.autocarindia.com/Utils/ImageResizer.ashx?n=https://cdni.autocarindia.com/ExtraImages/20141224045104_ninjaH2.jpg&w=700&q=90&c=1"
+            class="d-block w-100" alt="image not found">
+        </div>
+        <div class="carousel-item" data-bs-interval="2000">
+          <img src="https://static.autox.com/uploads/2020/08/Ducati-Panigale-V2-Static.jpg" class="d-block w-100"
+            alt="image not found">
+        </div>
+        <div class="carousel-item" data-bs-interval="2000">
+          <img
+            src="https://www.bennetts.co.uk/-/media/bikesocial/2020-november-images/2021-kawasaki-zx-10r-rr-details-price-spec/kawasaki-zx-10rr-2021-details-price-spec_thumb.ashx"
+            class="d-block w-100" alt="image not found">
+        </div>
+        <div class="carousel-item" data-bs-interval="2000">
+          <img src="https://images.carandbike.com/bike-images/large/yamaha/yzf-r1/yamaha-yzf-r1.jpg?v=12"
+            class="d-block w-100" alt="image not found">
+        </div>
+        <div class="carousel-item" data-bs-interval="2000">
+          <img src="https://imgcdn.zigwheels.ph/medium/gallery/exterior/72/924/harley-davidson-breakout-75967.jpg"
+            class="d-block w-100" alt="image not found">
+        </div>
+        <div class="carousel-item" data-bs-interval="2000">
+          <img
+            src="https://www.iamabiker.com/wp-content/uploads/2020/09/BS6-Royal-Enfield-Classic-350-Stealth-Black-edition-review-3.jpg"
+            class="d-block w-100" alt="image not found">
+        </div>
+        <div class="carousel-item" data-bs-interval="2000">
+          <img src="https://imgcdn.oto.com/large/gallery/exterior/89/1588/ktm-rc-390-marketing-image-289539.jpg"
+            class="d-block w-100" alt="image not found">
+        </div>
+        <div class="carousel-item" data-bs-interval="2000">
+          <img
+            src="https://static.tnn.in/thumb/msid-98507826,updatedat-1678345983213,width-1280,height-720,resizemode-75/98507826.jpg"
+            class="d-block w-100" alt="image not found">
+        </div>
+        <div class="carousel-item" data-bs-interval="2000">
+          <img src="https://img.indianautosblog.com/crop/1200x675/2020/03/19/hero-xtreme-160r-right-side-8ece.jpg"
+            class="d-block w-100" alt="image not found">
+        </div>
+        <div class="carousel-item" data-bs-interval="2000">
+          <img
+            src="https://www.honda.co.uk/content/dam/central/motorcycles/supersports/cbr650r_2022/Text-On-Dark/CBR650R-rolling-on-race-track-3-quarter-front-right-side.jpg/jcr:content/renditions/c5_r.jpg"
+            class="d-block w-100" alt="image not found">
+        </div>
+        <div class="carousel-item" data-bs-interval="2000">
+          <img
+            src="https://i0.wp.com/papertech.in/wp-content/uploads/2022/08/Pulsar-N160-Racing-Red-side-look-2.png?resize=1200%2C720&ssl=1"
+            class="d-block w-100" alt="image not found">
+        </div>
+        <div class="carousel-item" data-bs-interval="2000">
+          <img
+            src="https://images.unsplash.com/photo-1635073908681-b4dfbd6015e8?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8Ym13JTIwczEwMDBycnxlbnwwfHwwfHx8MA%3D%3D&w=1000&q=80"
+            class="d-block w-100" alt="image not found">
+        </div>
+
+
+
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleInterval"
+          data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleInterval"
+          data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+    </div>
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+      integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+      crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"
+      integrity="sha384-fbbOQedDUMZZ5KreZpsbe1LCZPVmfTnH7ois6mU1QK+m14rQ1l2bGBq41eYeM/fS"
+      crossorigin="anonymous"></script>
+  </div>
+  <div class="powerful">
+    <p style="color: aliceblue;">Most Powerful Bikes</p>
+  </div>
+  <div class="para">
+    <p style="color: aliceblue;">Our Official youtube Channel<br>For more information</p>
+    <iframe width="1000" height="400" src="https://www.youtube.com/embed/MSiPqTyWy2Q" title="YouTube video player"
+      frameborder="0"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+      allowfullscreen></iframe>
+  </div>
+  <hr style="color:aliceblue">
+  <div class="support">
+    <p style="color:aliceblue">SUPPORT FOR BIKEDEKHO</p>
+
+  </div>
+  <div class="social">
+    <p style="color:aliceblue">bikedekho123@gmail.com</p>
+    <p style="color:aliceblue"> +1800-100-8569</p>
+    <p style="color:aliceblue">Twitter</p>
+    <p style="color:aliceblue">instagram</p>
+    <p style="color:aliceblue">facebook</p>
+
+  </div>
+  <div class="media">
+    <p><img
+        src="https://w7.pngwing.com/pngs/5/598/png-transparent-email-computer-icons-mailbox-miscellaneous-cdr-angle.png"
+        alt="image not found"></p>
+    <p><img
+        src="https://st4.depositphotos.com/3894705/21127/i/600/depositphotos_211273078-stock-photo-telephone-symbol-flat-icon-circle.jpg"
+        alt="image not found"></p>
+    <p><a href="https://twitter.com/bikedekho/status/1265985350201044992"><img
+          src="https://1000logos.net/wp-content/uploads/2017/02/Twitter-Logosu.png" alt="image not found"></p></a>
+    <p><a href="https://www.instagram.com/bikedekho/channel/?hl=af"><img
+          src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/58/Instagram-Icon.png/800px-Instagram-Icon.png"
+          alt="image not found"></p></a>
+    <p><a href="https://www.facebook.com/BikeDekho/"><img
+          src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Facebook_Logo_%282019%29.png/1024px-Facebook_Logo_%282019%29.png"
+          alt="image not found"></p></a>
+  </div>
+
+
+
+
+
+</body>
+
+</html>
